@@ -30,7 +30,8 @@ if question:
 
   with st.chat_message("assistant"):
     with st.spinner("Asking RAG for answer...."):
-      answer = ask_rag (question, embed_model, chunks, index, api_key = mykey)
+      answer = ask_rag (question, embed_model, chunks, 
+                        index, num_chunks, api_key = mykey)
       st.write(answer)
       
 if st.button("Clear chat"):
