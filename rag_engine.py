@@ -58,7 +58,7 @@ def retrieve_content (question, embed_model, chunks, index, num_chunks=3):
   return background
 
 #Ask:
-def ask_rag (question, embed_model, chunks, index,  num_chunks, api_key, model_name = "openai/gpt-oss-120b"):
+def ask_rag (question, embed_model, chunks, index,  num_chunks=3, api_key, model_name = "openai/gpt-oss-120b"):
   key = api_key
   if not key:
     raise ValueError("API Key Missing")
